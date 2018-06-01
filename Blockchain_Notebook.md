@@ -8,7 +8,7 @@
 	2) Fast. Don't need 3 days to transfer money;
 	3) Free. No transaction fee.
 	```
-3. Distributed open ledger = chain
+3. Distributed open ledger = chain based on digital signature
 4. How to sync the ledger (miner)
 	```
 	1) validate the new transaction;
@@ -46,5 +46,38 @@
 	1) the new coin is owned by the creator of the block;
 	2) the first transaction of a block is special;
 	3) the attacker has to choose to defraud people by stealing back his payment or generate new coin.
+	4) TranX fee = input value of TranX - output value of TranX
 	```
-11. 
+11. Others of the paper
+	```
+	1) Merkle Tree to get Root Hash in order to reclaim disk space
+	2) Accept alerts from network nodes when they detect an invalid block.
+	3) Combining and splitting value: multiple inputs and at most 2 outputs (payment and returning change)
+	4) An attacker can only try to change one of his own tranX to take back money he recently spent
+	```
+12. Consensus mechanism
+	```
+	a) Nodes can leave or rejoin the network at will, accepting the proof-of-work chain as proof of what happened while they were gone.
+	b) They vote with their CPU power, expressing their acceptance of valid blocks by working
+	   on extending them and rejecting invalid blocks by refusing to work on them.
+	c) Any needed rules and incentives can be enforced with this consensus mechanism.
+	```
+13. Binominal random walk
+14. CAP (Berkerly professor: Brewer)
+	```
+	Consistency -- can be broken a little bit
+	Availability -- customers like
+	Tolerance of network partition  -- basic required
+	BASE -- Basically Available, Soft-state,  Eventually Consistency
+	ACID -- DB Atomicity, Consistency, Isolation, Durability
+	```
+15. Bitcoin Rules
+	```
+	1) MAX 21 million coins
+	  	0      -200,000 reward 50 BTC
+	  	200,001-400,000 reward 25 BTC
+	  	400,001-600,000 reward 12.5 BTC ...
+	2) 1 BTC = 1,000 mBTC = 1,000,000 uBTC = 1,000,000,000 Satoshi
+	3) Transactions considered inmutable after 6 blocks
+	```
+16. Ethereum is another big use of Blockchain
